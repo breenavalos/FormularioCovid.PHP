@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autodiagnóstico de COVID-19</title>
+    <style>
+        span {display: inline-block;width: 100%; }
+        div {margin: 20px;}
+        /* For the drop down menu*/
+        #dolorGarganta, #respiratoria { display: none;}
+        input {outline: none; }
+    </style>
+</head>
+<body>
+    
+    <form action="formulario.php" method="GET">
+
+        <div>
+            <h2>¿Cuál es tu temperatura corporal actual?</h2>
+        </div>
+
+        <div>
+            Selección de temperatura:
+            <input type="range" value="36" min="25" max="45" step="0.1" id="campo">
+            <input type="number" value="36" min="25" max="45" name="temperatura" id="temp2" step="0.1">
+        </div>
+
+        <div>
+            <h2>Si presentas alguno de los siguients síntomas, selecciona los correspondientes : </h2>
+          </div>
+
+        <div>
+            <span>¿Percibiste una marcada pérdida del olfato de manera repentina?</span>
+            <input type="radio" name="perdidaOlfato" value="1" /> Sí 
+            <input type="radio" name="perdidaOlfato" value="0" /> No 
+          </div>
+  
+          <div>
+            <span>
+              ¿Percibiste una marcada pérdida del gusto (sabor de los alimentos)
+              de manera repentina?
+            </span>
+            <input type="radio" name="perdidaGusto" value= "1" /> Sí 
+            <input type="radio" name="perdidaGusto" value= "0" /> No 
+          </div>
+  
+          <div id="tos">
+            <span>¿Tenés tos?</span>
+            <input type="radio" name="tos" value= "1" id="radioTos" /> Sí 
+            <input type="radio" name="tos" value= "0" id="radioTosNo" /> No 
+          </div>
+  
+          <div id="dolorGarganta">
+            <span>¿Tenés dolor de garganta?</span>
+            <input type="radio" name="dolorGarganta" value= "1" id="radioDolorGarganta" /> Sí 
+            <input type="radio" name="dolorGarganta" value= "0" id="radioDolorGargantaNo" /> No 
+          </div>
+  
+          <div id="respiratoria">
+            <span>¿Tenés dificultad respiratoria o falta de aire?</span>
+            <input type="radio" name="respiratoria" value= "1" /> Sí 
+            <input type="radio" name="respiratoria" value= "0" /> No 
+          </div>
+  
+          <div>
+            <span>¿Tenés dolor de cabeza?</span>
+            <input type="radio" name="dolorCabeza" value= "1" /> Sí 
+            <input type="radio" name="dolorCabeza" value= "0" /> No 
+          </div>
+  
+          <div>
+            <span>¿Tenés diarrea?</span>
+            <input type="radio" name="diarrea" value= "1" /> Sí 
+            <input type="radio" name="diarrea" value= "0" /> No 
+          </div>
+  
+          <div>
+            <span>¿Tenés vómitos?</span>
+            <input type="radio" name="vomitos" value= "1" /> Sí 
+            <input type="radio" name="vomitos" value= "0" /> No 
+          </div>
+  
+          <div>
+            <span>¿Tenés dolor muscular?</span>
+            <input type="radio" name="dolorMuscular" value= "1" /> Sí 
+            <input type="radio" name="dolorMuscular" value= "0" /> No 
+          </div>
+
+          <div>
+            <h2>Si tu situación de salud contempla alguna de las siguientes opciones, seleccioná las que correspondan</h2>
+          </div>
+
+          <div>
+            <input type="checkbox" name="antTrabajo"> Trabajo o convivo con una persona que actualmente es caso confirmado COVID-19              
+          </div>
+
+          <div>
+            <input type="checkbox" name="antUltimosDias"> Pasé en los últimos 14 días al menos 15 minutos cerca de una persona que actualmente es caso confirmado COVID-19             
+          </div>
+
+          <div>
+            <input type="checkbox" name="antCancer"> Tengo/tuve cáncer            
+          </div>
+
+          <div>
+            <input type="checkbox" name="antDiabetes"> Tengo diabetes             
+          </div>
+
+          <div>
+            <input type="checkbox" name="antHepatica"> Tengo alguna enfermedad hepática              
+          </div>
+
+          <div>
+            <input type="checkbox" name="antRenal"> Tengo enfermedad renal crónica              
+          </div>
+
+          <div>
+            <input type="checkbox" name="antRespiratoria"> Tengo alguna enfermedad respiratoria              
+          </div>
+
+          <div>
+            <input type="checkbox" name="antCardiologica"> Tengo alguna enfermedad cardiológica              
+          </div>
+
+          <div>
+            <input type="checkbox" name="antBajasDefensas"> Tengo alguna condición que baja las defensas              
+          </div>
+
+          <div>
+              <button>Enviar</button>
+          </div>
+    </form>
+
+    <script src="form.js"></script>
+    <!--
+        temperatura=36
+        perdidaOlfato=SI
+        perdidaGusto=SI
+        tos=SI
+        dolorGarganta=SI
+        respiratoria=SI
+        dolorCabeza=SI
+        diarrea=SI
+        vomitos=SI
+        dolorMuscular=SI
+        antTrabajo=on
+        antUltimosDias=on
+        antCancer=on
+        antDiabetes=on
+        antHepatica=on
+        antRenal=on
+        antRespiratoria=on
+        antCardiologica=on
+        antBajasDefensas=on
+    -->
+    <!--
+        temperatura=36
+        perdidaOlfato=NO
+        perdidaGusto=NO
+        tos=NO
+        dolorCabeza=NO
+        diarrea=NO
+        vomitos=NO
+        antCancer=on
+        antDiabetes=on
+        antHepatica=on
+        antRenal=on
+        antRespiratoria=on
+    -->
+</body>
+</html>
